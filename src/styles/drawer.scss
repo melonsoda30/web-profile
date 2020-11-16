@@ -1,0 +1,156 @@
+.modal-menu{
+  a{
+    color: #a6a6a6;
+    .modal-flash{
+      display: inline-block;
+      &:after{
+        content: "";
+        height: 1px;
+        margin-top: -15px;
+        width: 100%;
+        display: block;
+        background: #a6a6a62e;
+      }
+      &--child{
+        &:after{
+          margin-top: 0;
+        }
+      }
+    }
+    &:hover{
+      animation: flashing 30ms 0s linear infinite alternate-reverse;
+      color: #a6a6a6;
+    }
+  }
+  position: relative;
+  z-index: 10001;
+  color: #fff;
+  .drawer-toggle{
+    position: fixed;
+    top: 0;
+    z-index: 10010;
+    right: 0;
+    width: 10.71429em;
+    height: 100%;
+    display: flex;
+    background: #a6a6a6;
+    &:hover{
+      background: #1c1c1c;
+    }
+    .drawer-humberger{
+      margin: auto;
+      position: relative;
+      background:0 0;
+      &, &:after,&:before{
+        width: 3.5em;
+        height: 1px;
+      } 
+      &:after,&:before{
+        position: absolute;
+        top: -9px;
+        left: 0;
+        content: "";
+        background: #fff;
+        -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+        -o-transform-origin: center center;
+        transform-origin: center center;
+        moz-transform-origin: center center;
+      }
+      &:after{
+        top:3px
+      }
+      &::before{
+        top: -3px;
+      }  
+    }
+  }
+  &__inner{
+    position: fixed;
+    left: 10.71429em;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 21.42858em);
+    background: #181818;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+    
+    .site-menu{
+      position: relative;
+      display: flex;
+      height: 100%;
+      &__left{
+        margin: auto 100px;
+        text-align: left;
+      }
+      &__right{
+        flex-grow: 1;
+        text-align: right;
+        overflow-y: scroll;
+        margin-right: 100px;
+        font-family: 'DIN 2014';
+        font-weight: 100;
+        &::-webkit-scrollbar{
+          width: 0;
+          height: 0;
+        }
+      }
+      &__contact-info{
+        display: block;
+        align-items: center;
+        
+      }
+      &__text{
+        font-size: 12px;
+        margin-bottom: 10px;
+        &--child{
+          margin-bottom: 5px;
+        }
+     
+      }
+      &__list{
+        font-size: 7em;
+        margin-top: 7rem;
+        &-item{
+          .menu-list-child{
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            &__item{
+              margin: 10px 0;
+            }
+            &__item:last-child{
+               margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  
+}
+
+.nav-open{
+  .modal-menu__inner{
+    visibility: visible;
+    opacity: 1;
+  }
+  .drawer-toggle{
+    background: #1c1c1c;
+    .drawer-humberger{
+      &:after{
+        top:0;
+        transform: rotate(45deg);
+      }
+      &::before{
+        top: 0;
+        transform: rotate(-45deg);
+      }  
+    }
+  }
+}
+
+

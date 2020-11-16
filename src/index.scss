@@ -1,0 +1,46 @@
+// font
+@import '../src/assets/fonts/DIN2014/stylesheet.css';
+
+//componets
+@import './styles/header.scss';
+@import './styles/drawer.scss';
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+html{
+  background: #dfdfdf;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  color: rgb(51, 51, 51);
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(0,0,0,.3);
+  &:hover{
+    animation: flashing 30ms 0s linear infinite alternate-reverse;
+    color: #222;
+
+    .type-outer{
+      &:after{
+        background: #222;
+      }
+    }
+  }
+}
+ul{
+  list-style: none;
+}

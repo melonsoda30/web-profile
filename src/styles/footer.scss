@@ -1,66 +1,148 @@
-.footer{
+.footer {
+  position: relative;
+  z-index: 997;
+  display: flex;
+  background: #222;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: calc(100% - 10.71429em);
+  color: #666;
+  &__sitemenu {
+    order: 2;
+    width: calc(100% - 22.7%);
+  }
+  &__inner {
+    width: 64.8%;
+    position: relative;
     display: flex;
-    background: #222;
-    justify-content: space-between;
-    border-top: 1px solid rgba(0,0,0,.1);
-    width: calc(100% - 10.71429em);
-    color: #666;
-    &__inner{
-      width: 64.8%;
-      position: relative;
-      display: flex;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      flex-wrap: wrap;
-      padding: 5.42857em 0 4.14286em 5.35714em;
-      -webkit-flex-wrap: wrap;
-      -moz-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    padding: 5.42857em 0 4.14286em 5.35714em;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+  }
+  &__logo {
+    order: 1;
+    width: 22.7%;
+    -webkit-box-ordinal-group: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    img {
+      width: 49px;
     }
-    &__logo{
-      order: 1;
-      width: 22.7%;
-      -webkit-box-ordinal-group: 1;
+    &-icon {
+      margin-bottom: 2.14286em;
     }
-    &__sitemenu{
-      order: 2;
-      width: calc(100% - 22.7%);
+    &-desc {
+      text-align: left;
+      font-size: 1rem;
+      /* color: #666; */
+      letter-spacing: 0.05em;
+      font-weight: 300;
     }
-    &__contact{
-      width: 35.2%;
-      display: flex;
-      flex-direction: column;
+    a {
+      color: #666;
+    }
+  }
+  &__sns {
+    margin-top: 1.71429em;
+    font-size: 1.4em;
+    a {
+      color: #666;
+      i {
+        font-size: 1.2em;
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &__copyright {
+    margin-top: 8em;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  &__contact {
+    width: 35.2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-btn,
+    &-panel {
+      height: 50%;
+      width: 100%;
+    }
+    &-link {
       align-items: center;
-      &-btn,&-panel{
-        height: 50%;
-        width: 100%;
-      }
-      &-link{
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        color: #fff;
-      }
-      &-text{
-        display: block;
-        width: 100%;
-      }
-      &-panel{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      &-summary{
-        color: #fff;
-        font-size: 1.4rem;
-        margin-bottom: 0.8rem;
-      }
-      &-phone,&-mail{
-        
-        letter-spacing: .04em;
-        font-size: 1.2rem;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      color: #fff;
+      background: #181818;
+    }
+    &-text {
+      display: block;
+      width: 100%;
+    }
+    &-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #1c1c1c;
+    }
+    &-summary {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    &-phone,
+    &-mail {
+      letter-spacing: 0.04em;
+      font-size: 1.2rem;
+    }
+  }
+}
+.sitemenu {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &__block {
+    position: relative;
+    z-index: 10;
+    width: 7.14286em;
+    text-align: left;
+  }
+  &__detail {
+    &-list {
+      margin-bottom: 0.85714em;
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      font-size: 1.2rem;
+      a {
+        color: #666;
       }
     }
+  }
+  &__index {
+    margin-top: 2px;
+    margin-bottom: 2.28571em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 1;
+    &-text {
+      font-size: 1.4rem;
+      a {
+        color: #666;
+      }
+    }
+  }
 }

@@ -1,0 +1,122 @@
+&__member {
+  padding: calc(50vh - 3.71429em) 0;
+  &-item {
+    position: relative;
+  }
+  &-detail {
+    display: flex;
+    display: -webkit-flex;
+
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    -moz-align-items: baseline;
+    -ms-align-items: baseline;
+    -webkit-box-align: baseline;
+  }
+  &-cat {
+    position: relative;
+    font-weight: 300;
+    line-height: 1;
+
+    padding-left: 8.33333em;
+    width: 24.16667em;
+    letter-spacing: 0.07em;
+    font-size: 1.2rem;
+
+    .type-outer {
+      display: inline-block;
+      width: calc(100% - 5px);
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      display: block;
+      width: 0px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.45);
+      content: '';
+      opacity: 0;
+
+      //loaded
+      width: calc(100vw - 150px * 2);
+      background-color: rgba(0, 0, 0, 0.1);
+      opacity: 1;
+
+      -webkit-transition: opacity 0.2s ease-out !important;
+      transition: opacity 0.2s ease-out !important;
+    }
+
+    a {
+      display: inline-block;
+      -webkit-transition: color 0.2s linear;
+      transition: color 0.2s linear;
+
+      padding-right: 30px;
+      width: 100%;
+
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+  &-name {
+    line-height: 0.7;
+
+    width: calc(100% - 4.53125em);
+    letter-spacing: 0.04em;
+    font-size: 6.4rem;
+
+    a {
+      padding: 0.28125em 0;
+      background-image: url('../bg-text.png');
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-repeat: repeat;
+      color: transparent;
+      line-height: 1;
+      -webkit-transition: opacity 0.2s linear, color 0.2s linear;
+      transition: opacity 0.2s linear, color 0.2s linear;
+
+      //mq
+      display: inline-block;
+
+      webkit-animation: moveBg_1 90s infinite linear;
+      animation: moveBg_1 90s infinite linear;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+
+      &:first-child {
+        padding-top: 0;
+      }
+      .name-initial {
+        background-image: url('../bg-text-first.png');
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-repeat: repeat;
+
+        animation: moveBg_first_1 18s infinite linear;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+@keyframes moveBg_1 {
+  0% {
+    background-position: 0 -60px;
+  }
+  100% {
+    background-position: -528px -60px;
+  }
+}
+
+@keyframes moveBg_first_1 {
+  0% {
+    background-position: 0 -10px;
+  }
+  100% {
+    background-position: -68px -10px;
+  }
+}

@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import ModalMenu from './components/ModalMenu';
+import Home from './screens/Home';
 
 function App() {
   const [isOpen, setValue] = useState(false);
@@ -17,15 +18,15 @@ function App() {
             <p class="sideinfo__summary">
               <span class="sideinfo__summary-text">
                 <span class=" type-outer" id="type-summary">
-                  <span class="Typewriter__wrapper">Visual Creator Coll</span>
+                  <span class="Typewriter__wrapper">Lorem ipsum dolor sit amet</span>
                 </span>
               </span>
             </p>
           </div>
         </div>
         <ModalMenu setValue={setValue} isOpen={isOpen} />
-        <main className="main" style={{ height: '1000px' }}>
-          asdasdasdasd
+        <main className="main">
+          <Home />
         </main>
         <Footer />
       </Router>

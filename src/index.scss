@@ -1,6 +1,9 @@
 // font
 @import '../src/assets/fonts/DIN2014/stylesheet.css';
 
+//screens
+@import './styles/home.scss';
+
 //componets
 @import './styles/header.scss';
 @import './styles/sideinfo.scss';
@@ -14,6 +17,12 @@
 html {
   background: #dfdfdf;
   font-size: 10px;
+}
+
+@media screen and (min-width: 1680px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 body {

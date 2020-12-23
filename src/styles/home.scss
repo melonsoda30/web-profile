@@ -1,0 +1,6 @@
+.home {
+  @import './member-list.scss';
+  margin: 0 10.71429em;
+  font-family: 'DIN 2014';
+  width: calc(100% - 10.71429em * 2) !important;
+}
